@@ -2,8 +2,6 @@
 const products = [
  {id:1,name:"Sélection Fleurs",cat:"Fleurs",price:0,desc:"Fiche de présentation à compléter après vérification réglementaire.",icon:"✦"},
  {id:2,name:"Sélection Résines",cat:"Résines",price:0,desc:"Fiche de présentation à compléter après vérification réglementaire.",icon:"◆"},
- {id:3,name:"Huiles",cat:"Huiles",price:0,desc:"Fiche de présentation à compléter après vérification réglementaire.",icon:"◈"},
- {id:4,name:"Infusions",cat:"Infusions",price:0,desc:"Fiche de présentation à compléter après vérification réglementaire.",icon:"❖"}
 ];
 const cart = {};
 const euro = n => new Intl.NumberFormat("fr-FR",{style:"currency",currency:"EUR"}).format(n);
@@ -19,7 +17,7 @@ function renderCart(){
  document.getElementById("cart-count").textContent=count+" ARTICLE"+(count>1?"S":"");
  document.getElementById("nav-badge").textContent=count;
  document.getElementById("cart-items").innerHTML=rows.length?rows.map(([id,q])=>{const p=products.find(x=>x.id==id);return `<div class="cart-row"><span>${p.name} × ${q}</span><button data-remove="${id}" aria-label="Retirer">−</button></div>`}).join(""):'<p class="empty">Votre panier est vide pour le moment.</p>';
- document.getElementById("cart-total").textContent="À définir";
+ document.getElementById("cart-total").textContent="en stock";
 }
 document.addEventListener("click",e=>{
  const f=e.target.closest("[data-filter]"); if(f){document.querySelectorAll(".filter").forEach(x=>x.classList.remove("active"));f.classList.add("active");renderProducts(f.dataset.filter)}
