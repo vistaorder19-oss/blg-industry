@@ -4,7 +4,7 @@
 - `index.html` : interface de la Mini App
 - `styles.css` : design responsive rouge/noir
 - `app.js` : catalogue de démonstration et panier local
-- `assets/blg-visual.jpeg` : visuel fourni
+- `"blg-visual.jpeg"` : visuel fourni
 
 ## Mise en ligne
 Publiez le contenu de ce dossier sur un hébergement statique HTTPS (par exemple GitHub Pages, Cloudflare Pages ou Netlify), puis configurez l'URL publique dans BotFather pour le bot `@blgindustrybot`.
